@@ -1,0 +1,121 @@
+@use "../abstracts/mixin" as mix;
+
+footer {
+  padding: 100px 0px 90px;
+  background: #1c1e53;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.footer-left {
+  p {
+    padding: 25px 0;
+    max-width: 399px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+  .footer-title {
+    background: #fcd980;
+    max-width: 517px;
+    column-gap: 30px;
+    row-gap: 2px;
+    padding: 18px 37px;
+    h5 {
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 32px;
+      color: #282938;
+    }
+    a {
+      font-family: "Poppins", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      color: #282938;
+      opacity: 0.8;
+    }
+  }
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+    color: #ffffff;
+  }
+  p {
+    max-width: 399px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #f4f6fc;
+    opacity: 0.8;
+  }
+  .footer-sities {
+    display: flex;
+    column-gap: 16px;
+  }
+}
+
+@media (min-width: 962px) {
+  .footer-container {
+    @include mix.df-aic;
+    align-items: start;
+    gap: 145px;
+
+
+    .footer-title {
+      @include mix.dg-gtc-2;
+    }
+  }
+}
+
+
+@media (max-width: 962px) {
+  .footer-container {
+    @include mix.df-fdc;
+
+    .footer-title {
+      display: grid;
+      grid-template-columns: auto;
+      column-gap: 16px;
+
+      .use-1 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+      }
+
+      .use-2 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+
+      .use-3 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
+
+      .use-4 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+      }
+    }
+  }
+}

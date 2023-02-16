@@ -1,0 +1,31 @@
+@mixin df-jcsb-aic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @mixin df-aic {
+    display: flex;
+    align-items: center;
+  }
+  
+  @mixin df-fdc-aic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  @mixin df-fdc {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @mixin dg-gtc-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  @mixin dg-gtc-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
